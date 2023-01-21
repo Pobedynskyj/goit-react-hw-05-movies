@@ -1,0 +1,19 @@
+.header {
+  height: 50px;
+  border-bottom: 1px solid grey;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mainbtn {
+  margin: 10px;
+  border: 1px solid grey;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: grey;
+  text-decoration: none;
+  color: black;
+}
