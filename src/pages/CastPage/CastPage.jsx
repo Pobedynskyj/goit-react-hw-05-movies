@@ -19,25 +19,27 @@ const CastPage = () => {
     return;
   }
 
-  <ul>
-    {actorDetails.map(({ profile_path, name, character, cast_id }) => {
-      return (
-        <li key={cast_id} className={s.cast_item}>
-          <img
-            src={
-              profile_path !== null
-                ? `${imageUrl}${profile_path}`
-                : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-            }
-            alt={name}
-            width="150"
-          />
-          <p className={s.name_cast}>{name}</p>
-          <p className={s.char}>Character: {character}</p>
-        </li>
-      );
-    })}
-  </ul>;
+  return (
+    <ul className={s.list}>
+      {actorDetails.map(({ profile_path, name, character, cast_id }) => {
+        return (
+          <li key={cast_id} className={s.cast_item}>
+            <img
+              src={
+                profile_path !== null
+                  ? `${imageUrl}${profile_path}`
+                  : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
+              }
+              alt={name}
+              width="150"
+            />
+            <p className={s.name_cast}>{name}</p>
+            <p className={s.char}>Character: {character}</p>
+          </li>
+        );
+      })}
+    </ul>
+  );
 };
 
 export default CastPage;

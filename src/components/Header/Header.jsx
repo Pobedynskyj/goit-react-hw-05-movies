@@ -12,7 +12,9 @@ const Header = () => {
       <div className={s.nav}>
         {navItems.map(({ href, text }) => (
           <NavLink
-            className={({ isActive }) => (isActive ? s.active_link : null)}
+            className={({ isActive }) =>
+              isActive ? s.active_link : s.btn_link
+            }
             to={href}
             key={href}
           >

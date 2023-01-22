@@ -25,7 +25,7 @@ const OneFilmPage = () => {
   const vote = Math.round(vote_average) * 10;
 
   return (
-    <>
+    <div className={s.solo_film}>
       <div className={s.link_box}>
         <Link className={s.back_link} to={goBack}>
           Go back
@@ -54,15 +54,14 @@ const OneFilmPage = () => {
           <Link className={s.back_link} to="cast">
             Cast
           </Link>
-        </div>
-        <div className={s.link_box}>
+
           <Link className={s.back_link} to="reviews">
             Reviews
           </Link>
         </div>
       </div>
       <Outlet />
-    </>
+    </div>
   );
 };
 

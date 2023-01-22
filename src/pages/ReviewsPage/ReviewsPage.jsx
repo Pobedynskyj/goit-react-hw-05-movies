@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { movieReviews } from 'service/api';
+import s from './ReviewsPage.module.css';
 
 const ReviewsPage = () => {
   const { movieId } = useParams();
@@ -9,7 +10,7 @@ const ReviewsPage = () => {
 
   useEffect(() => {
     movieReviews(movieId)
-      .then(({ data }) => setReviewFilm(data.result))
+      .then(({ data }) => setReviewFilm(data.results))
       .catch(error => error);
   }, [movieId]);
   console.log(reviewFilm);
@@ -19,7 +20,7 @@ const ReviewsPage = () => {
   }
 
   return reviewFilm.length > 0 ? (
-    <ul>
+    <ul className={s.list}>
       {reviewFilm.map(({ content, author, id }) => {
         return (
           <li key={id}>

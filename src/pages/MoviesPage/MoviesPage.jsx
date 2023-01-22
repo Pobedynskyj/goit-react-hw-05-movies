@@ -30,7 +30,7 @@ const MoviesPage = () => {
     <>
       <SearchForm onSubmit={handleSubmit} />
       {searchMovie.length > 0 ? (
-        <FilmList films={searchMovie} query={searchQuery} />
+        <FilmList options={searchMovie} query={searchQuery} />
       ) : null}
     </>
   );
