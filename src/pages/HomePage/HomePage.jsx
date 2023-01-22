@@ -9,6 +9,7 @@ const HomePage = () => {
   useEffect(() => {
     trendingMovies().then(setFilms);
   }, []);
+  console.log(films);
 
   if (!films.length) {
     return;

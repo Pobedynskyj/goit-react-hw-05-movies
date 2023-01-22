@@ -12,8 +12,9 @@ const ReviewsPage = () => {
       .then(({ data }) => setReviewFilm(data.result))
       .catch(error => error);
   }, [movieId]);
+  console.log(reviewFilm);
 
-  if (!movieId) {
+  if (!reviewFilm) {
     return;
   }
 
@@ -29,7 +30,7 @@ const ReviewsPage = () => {
       })}
     </ul>
   ) : (
-    <p>Review isn't found</p>
+    <p>Review not found</p>
   );
 };
 
