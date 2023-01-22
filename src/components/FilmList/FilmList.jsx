@@ -14,7 +14,7 @@ const FilmList = ({ options }) => {
               option;
             const poster = `https://image.tmdb.org/t/p/w500${poster_path}`;
             const score = Math.floor(vote_average) * 10;
-            const year = release_date ? release_date.slice(0, 4) : year;
+            const year = release_date ? release_date.slice(0, 4) : null;
             return (
               <li key={option.id} className={s.item}>
                 <Link to={`/movies/${id}`} state={{ prev: location }}>
