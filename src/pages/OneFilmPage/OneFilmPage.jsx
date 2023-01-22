@@ -1,10 +1,4 @@
-import {
-  Link,
-  useParams,
-  NavLink,
-  Outlet,
-  useLocation,
-} from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import { Oval } from 'react-loader-spinner';
 import s from './OneFilmPage.module.css';
 import { movieInfo } from 'service/api';

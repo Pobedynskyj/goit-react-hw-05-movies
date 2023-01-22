@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import s from './Header.module.css';
 
 const navItems = [
@@ -11,12 +11,15 @@ const Header = () => {
     <header className={s.header}>
       <div className={s.nav}>
         {navItems.map(({ href, text }) => (
-          <Link to={href} key={href} className={s.mainbtn}>
+          <NavLink
+            className={({ isActive }) => (isActive ? s.active_link : null)}
+            to={href}
+            key={href}
+          >
             {text}
-          </Link>
+          </NavLink>
         ))}
       </div>
-      <Outlet />
     </header>
   );
 };
